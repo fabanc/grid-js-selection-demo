@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Grid JS - Test Single Selection</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script src="js/gridjs.umd.js"></script>
+		<script src="js/selection.umd.js"></script>
+		<link
+		href="theme/mermaid.min.css"
+		rel="stylesheet"
+	  />
+
+	</head>
+	<body>
+		<h1>Grid JS - Test Single Selection</h1>
+		<div id="mygrid"></div>
+		<script>
+			let singleSelection = gridjs.plugins.selection.RowSelectionSingle;
+			
+			let grid = new gridjs.Grid({
+				columns: [
+					{
+						id: 'select',
+						name: 'Select',
+						plugin: {
+							component: singleSelection
+						}
+					 },
+					 {
+						id: 'a',
+						name: 'Column A'
+					 },
+					 {
+						id: 'b',
+						name: 'Column B'
+					 },
+					 {
+						id: 'c',
+						name: 'Column C'
+					 }
+					],
+				data: [
+					[1, 2, 3],
+					[4, 5, 6],
+					[7, 8, 9],
+					[10, 11, 12],
+				],
+				}).render(document.getElementById("mygrid"));
+	</script>
+	</body>
+</html>
