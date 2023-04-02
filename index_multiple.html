@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Grid JS - Test Single Selection</title>
+		<title>Grid JS - Test Multiple Selection</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,11 +15,11 @@
 
 	</head>
 	<body>
-		<h1>Grid JS - Test Single Selection</h1>
-		<a href="index_multiple.html"> Demo - Multiple Selection</a>
+		<h1>Grid JS - Test Multiple Selection</h1>
+		<a href="index.html"> Demo - Single Selection</a>
 		<div id="mygrid"></div>
 		<script>
-			let singleSelection = gridjs.plugins.selection.RowSelectionSingle;
+			let singleSelection = gridjs.plugins.selection.RowSelection;
 			let grid = new gridjs.Grid({
 				columns: [
 					{
