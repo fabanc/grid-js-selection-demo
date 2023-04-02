@@ -49,6 +49,9 @@
 					[10, 11, 12],
 				],
 				}).render(document.getElementById("mygrid"));
+
+				grid.on('rowClick', (...args) => console.log('row: ' + JSON.stringify(args), args));
+				grid.on('cellClick', (...args) => console.log('cell: ' + JSON.stringify(args), args));
 	</script>
 	</body>
 </html>
